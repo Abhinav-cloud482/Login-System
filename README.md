@@ -21,3 +21,77 @@ A simple desktop-based login system built using Python and Tkinter. This project
 - Pickle (Data Storage)
 - Hashlib (Password Security)
 - UUID (Session Token)
+
+## Project Structure
+
+```
+Login-System/
+│── Login - System.py   # Main application file
+│── users.pkl           # Auto-generated user database (after first run)
+│── README.md           # Project documentation
+
+```
+
+## Installation & Setup
+
+1. Clone the repository :
+
+```
+git clone https://github.com/your-username/login-system.git
+cd login-system
+```
+
+2. Run the application :
+
+```
+python "Login - System.py"
+```
+
+   - Make sure Python 3 is installed on your system.
+
+
+## Usage
+
+### Register
+
+  - Enter a username and password (minimum 6 characters)
+  - Click Register
+
+### Login
+
+  - Enter registered credentials
+  - Click Login
+  - On success, a session token will be generated
+
+### Reset Password
+
+  - Enter your username
+  - Click Reset Password
+  - Provide a new password
+
+
+## Security Features
+
+- Passwords are hashed using SHA-256 before storage
+- Accounts are locked after 3 failed login attempts
+- Resetting password unlocks the account
+- Session tokens generated using UUID
+
+
+## Limitations
+
+- Uses Pickle for storage (not recommended for production)
+- No database integration
+- No encryption for stored files
+- Basic UI (Tkinter-based)
+
+
+## Future Improvements
+
+- Replace Pickle with SQLite or a secure database
+- Add email-based password recovery
+- Improve UI/UX
+- Implement password strength validation
+- Add multi-user session management
+
+
